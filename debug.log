@@ -1,0 +1,4 @@
+[1011/150036.469:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1015/180627.447:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\lobik\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\c1d053e0-95c8-4732-b918-53bb54ebf2ca: The system cannot find the path specified. (0x3)
+[1015/180627.447:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1018/145925.862:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
