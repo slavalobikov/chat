@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.message {
+  display: flex;
+  max-width: 440px;
+  &__avatar {
+    img {
+      border-radius: 50px;
+      width: 33px;
+      height: 33px;
+      margin-right: 13px;
+      margin-bottom: 18px;
+    }
+
+    }
+  &__content__date {
+    font-size: 14px;
+    opacity: 0.4;
+  }
+  &__bubble {
+    background-color: $blue;
+    box-shadow: 0 5px 5px rgba(54, 116, 255, 0.2);
+    border-radius: 12px 12px 12px 0;
+    padding: 15px;
+    margin-bottom: 10px;
+
+
+    p {
+      color:#ffffff;
+      line-height: 20px;
+    }
+  }
+}

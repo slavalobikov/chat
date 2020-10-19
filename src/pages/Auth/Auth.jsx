@@ -13,8 +13,12 @@ const Auth = () => {
     return (
         <section className={'auth'}>
             <Block>
-                <Route exact path={['/', '/login']} component={LoginForm}/>
-                <Route path={'/register'} component={RegisterForm}/>
+
+                <Route exact  path={['/', '/login']} component={LoginForm}/>
+
+                <Route  path={'/register'} component={RegisterForm}/>
+
+
                 {/*                <Form
                     name="normal_login"
                     className="login-form"

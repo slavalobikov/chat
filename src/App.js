@@ -1,14 +1,17 @@
 import React from 'react';
-import Button from "./components/Button";
-import Block from "./components/Block/Block";
+import {Route} from 'react-router-dom'
+
+
 import Auth from "./pages/Auth/Auth";
+import Home from "./pages/Home/Home";
 
 const App = () => {
 
   return (
       <div className="wrapper">
-          
-            <Auth />
+          <Route exact  path={['/', '/login']} component={Auth}/>
+          <Route path={'/im'} component={Home} />
+          {/*<Auth/>*/}
       </div>
   )
 };
