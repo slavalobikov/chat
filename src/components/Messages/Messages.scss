@@ -1,15 +1,37 @@
 @import '../../styles/variables';
 
+
+
+
+
 .message {
   display: flex;
   max-width: 440px;
+  margin-bottom: 15px;
+  &__attachments {
+    display: flex;
+    margin-bottom: 5px;
+    &__item {
+      margin-right: 15px;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+
+    }
+  }
   &__avatar {
+    display:flex;
+    flex-direction: column-reverse;
     img {
       border-radius: 50px;
       width: 33px;
       height: 33px;
       margin-right: 13px;
-      margin-bottom: 18px;
+      margin-bottom: 32px;
     }
 
     }
@@ -26,8 +48,52 @@
 
 
     p {
+      /*
+      min-width: 500px;
+      */
       color:#ffffff;
       line-height: 20px;
     }
+
+  }
+  &--isme {
+    display:flex;
+    flex-direction: row-reverse;
+    margin-left:auto;
+    .message__content {
+
+      img {
+        position: relative;
+        left: -40px;
+        bottom: -40px;
+      }
+    }
+    .message__avatar {
+      img {
+        margin-left: 13px;
+      }
+    }
+    .message__bubble {
+      background-color: #ffffff;
+      border: 1px solid #ececec;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.03);
+      border-radius: 12px 12px 0 12px;
+      p {
+        color: $black
+      }
+    }
+    /*&__avatar {
+      display:flex;
+      flex-direction: column-reverse;
+      img {
+        border-radius: 50px;
+        width: 33px;
+        height: 33px;
+        margin-right: 13px;
+        margin-bottom: 32px;
+      }
+
+    }*/
+
   }
 }

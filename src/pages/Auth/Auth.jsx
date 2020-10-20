@@ -5,7 +5,10 @@ import {Route} from 'react-router-dom'
 import Block from "../../components/Block/Block";
 import './Auth.scss'
 import LoginForm from "../../modules/LoginForm";
+import RegisterForm from "../../modules/RegisterForm/containers/RegisterForm";
+/*
 import RegisterForm from "../../modules/RegisterForm/components/RegisterForm";
+*/
 
 const Auth = () => {
 
@@ -14,7 +17,7 @@ const Auth = () => {
         <section className={'auth'}>
             <Block>
 
-                <Route exact  path={['/', '/login']} component={LoginForm}/>
+                <Route exact  path={['/', '/login', ]} component={LoginForm}/>
 
                 <Route  path={'/register'} component={RegisterForm}/>
 
