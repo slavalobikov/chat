@@ -4,7 +4,7 @@ import {Route} from 'react-router-dom'
 
 import Block from "../../components/Block/Block";
 import './Auth.scss'
-import LoginForm from "../../modules/LoginForm";
+import LoginForm from "../../modules/LoginForm/containers/LoginForm";
 import RegisterForm from "../../modules/RegisterForm/containers/RegisterForm";
 /*
 import RegisterForm from "../../modules/RegisterForm/components/RegisterForm";

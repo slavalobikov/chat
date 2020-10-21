@@ -15,11 +15,6 @@ const RegisterForm = (props) => {
     const [reg, setReg] = useState(false);
 
 
-    const onFinish = values => {
-        console.log('Received values of form: ', values);
-/*        console.log(count);
-        console.log(setCount(count + 1))*/
-    }
 
     const {
         values,
@@ -28,7 +23,6 @@ const RegisterForm = (props) => {
         handleChange,
         handleBlur,
         handleSubmit,
-        isValid,
     } = props;
     return (
         <div>
@@ -40,13 +34,14 @@ const RegisterForm = (props) => {
                 name="normal_login"
                 className="login-form"
                 initialValues={{ remember: true }}
-/*
-                onFinish={onFinish}
-*/
+
                 onSubmit={handleSubmit}
             >
                 <Form.Item
-                    validateStatus={errors.name && touched.name && 'error'}
+
+                    validateStatus={errors.login && touched.login && 'error'}
+                    help={errors.login && touched.login && errors.login}
+
                     name="username"
                     rules={[{ required: true, message: 'Please input your Username!' }]}
                 >
@@ -55,14 +50,13 @@ const RegisterForm = (props) => {
 /*
                            value={values.name}
 */
-                           name={'name'}
+                           name={'login'}
 
                            onBlur={handleBlur}
                            onChange={handleChange}
 
 
                     />
-                    {errors.name && touched.name && <div id="feedback">{errors.name}</div>}
                 </Form.Item>
                 <Form.Item
                     rules={[{ required: true, message: 'Please input your Username!'  }]}
