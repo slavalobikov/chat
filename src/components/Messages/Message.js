@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import  classNames  from 'classnames'
+import format from 'date-fns/format'
 
 
 import './Messages.scss'
 import Time from "../Time/Time";
 import CheckIcon from "../CheckIcon/CheckIcon";
+
+
+
 
 const Message = ({avatar, text, username, data, isMe, isReaded, attachments, isTyping}) => {
     return (

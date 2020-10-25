@@ -3,28 +3,45 @@ import React from 'react';
 
 import './Home.scss'
 import Message from "../../components/Messages/Message";
-import Dialog from "../../components/DialogItem/Dialog";
+import Dialogs from "../../components/Dialogs/Dialogs";
 
 const Home = () => {
     return (
         <section className={'home'}>
-            <div className="dialogs">
-                <Dialog items={[
+            <Dialogs
+                items={[
                     {
-                        user: {
-                            fullname: 'Сергей Шнитко',
+                        id: Math.random(),
+                        text:'Буду продолжать до тех пор, пока не найду того, кого не смогу победить» Томас Шелби',
+                        created: 'Fri Oct 22 2020 19:29:06 GMT+0300 (Moscow Standard Time)',
+                        message:{
+                        isReded: true,
+                        isRededNewMessageForYou: false,
+                        unreaded:3,
+                    },
+                        user:{
+                            fullname:'Сергей Шнитко',
+                            isOnline: true,
                             ava: null,
-                        },
-                        message: {
-                            text: 'Буду продолжать до тех пор, пока не найду того, кого не смогу победить» Томас Шелби',
-                            isReded: false,
-                            created: new Date(),
-                        },
-                    }
-                ]} />
+                     }
+                    },
+                    {
+                        text:'Буду продолжать до тех пор, пока не найду того, кого не смогу победить» Томас Шелби',
+                        created: 'Fri Oct 30 2020 19:29:06 GMT+0300 (Moscow Standard Time)',
+                        message:{
+                        isReded: true,
+                        isRededNewMessageForYou: true,
+                        unreaded:3,
+                    },
+                        user:{
 
-            </div>
+                        fullname:'Сергей Шнитко',
+                        isOnline: true,
+                        ava: null,
+                }}
 
+                ]}
+            />
 
             <Message
                 avatar={'https://avatars.mds.yandex.net/get-zen_doc/60808/pub_5d28c47546f4ff00ac25f73d_5d28c4e925667300ad6aa0cd/scale_1200'}

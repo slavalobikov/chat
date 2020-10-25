@@ -1,4 +1,21 @@
 @import './../../styles/variables';
+.dialogs__item-online {
+  .dialogs__item__avatar {
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      right: 0;
+      content: '';
+      background-color: $green;
+      border-radius: 30px ;
+      width: 12px;
+      height: 12px;
+      border: 3px solid #ffffff;
+
+    }
+  }
+}
 
 
 .dialogs__item {
@@ -8,22 +25,7 @@
   $item: &;
 
 
-  .dialogs__item-online {
-    .dialogs__item__avatar {
-    &::before {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      content: '';
-      background-color: $green;
-      border-radius: 30px ;
-      width: 8px;
-      height: 8px;
 
-    }
-  }
-  }
 
   &__avatar {
     position: relative;
@@ -65,10 +67,12 @@
         white-space: nowrap;
       }
       &-count {
+        background-color: #f46b6b;
+      }
+      &-read {
         position: absolute;
         right: 0;
         bottom: 13px;
-        background-color: #f46b6b;
         color:#fafafa;
         font-weight: 500;
         width: 18px;
