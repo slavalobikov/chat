@@ -12,7 +12,9 @@ function LoginForm(props) {
         handleChange,
         handleBlur,
         handleSubmit,
+/*
         isValid,
+*/
     } = props;
 
     return (

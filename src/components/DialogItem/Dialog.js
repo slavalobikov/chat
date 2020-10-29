@@ -5,7 +5,9 @@ import isToday from 'date-fns/isToday'
 
 
 
+/*
 import Time from "../Time/Time";
+*/
 import CheckIcon from "../CheckIcon/CheckIcon";
 import './Dialog.scss'
 

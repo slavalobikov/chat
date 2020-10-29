@@ -8,7 +8,6 @@ import Dialog from "../DialogItem/Dialog";
 
 const Dialogs = ( {items} ) => {
     
-    console.log(items)
     return (
         <div className="dialogs">
             {orderBy(items, ['created'], ['desc']).map(item => (
