@@ -11,7 +11,7 @@ export default ({ isAuth , values, errors}) => {
             }
         },
         password: (errors, value, isAuth) => {
-            debugger
+
             if (!value) {
                 errors.password = 'Вы не ввели пароль';
             } else if (!/^(?=.*[A-Z].*[A-Z])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}/i.test(value)) {
