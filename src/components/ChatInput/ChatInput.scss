@@ -1,0 +1,33 @@
+.chat__input {
+  padding:20px;
+  position: relative;
+  &__smile-btn, &____actions {
+    position: absolute;
+  }
+  .icons {
+    position: absolute;
+    top:31px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .camera {
+    right: 75px;
+  }
+  .send {
+    right: 35px;
+  }
+  .smiles {
+    left:250px;
+
+  }
+  input {
+    &:focus {
+/*      border: 1px solid red;
+      box-shadow: none;*/
+    }
+  }
+}

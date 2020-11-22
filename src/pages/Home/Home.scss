@@ -4,10 +4,12 @@
     display: flex;
     width: 100vw;
     height: 100vh;
+
+
     &__sidebar {
       width: 320px;
       border-right: 1px solid #f7f7f7;
-      overflow-y: scroll;
+      overflow-y: hidden;
       overflow-x: hidden;
       &-header {
 
@@ -39,7 +41,24 @@
         background-color:   #fafafa;
         z-index: 10;
       }
+
+      &-dialogs::-webkit-scrollbar{
+        width: 5px;
+      }
+      &-dialogs::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+      &-dialogs::-webkit-scrollbar-thumb {
+        background: #fafafa;
+        height: 30px;
+        border-radius: 10px;
+      }
+
       &-dialogs {
+        overflow-y: scroll;
+        height:calc(100% - 62px - 52px);
+        overflow-x: hidden;
         .dialogs {
           padding: 0 5px 0;
           &__item:hover, &__item.active {
@@ -50,17 +69,71 @@
 
       }
     }
+
     &__dialog {
       flex:1;
       width: 100%;
-      overflow-y: scroll;
+      overflow-y: hidden;
       &-header {
+        padding: 10px;
         position: sticky;
         top:0;
-        background-color: #f7f7f7;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #f7f7f7;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 auto;
+        }
+
+        .edit {
+          cursor: pointer;
+          font-size: 22px;
+        }
+
+        &-fullname {
+          font-size: 16px;
+        }
+        &-status {
+          opacity: 0.4;
+          position: relative;
+          .status--online {
+            &::before {
+              display: block;
+              position: absolute;
+              left:-11px;
+              top:9px;
+              content: '';
+              width: 6px;
+              height: 6px;
+              border-radius: 30px;
+              background-color:green;
+            }
+          }
+
+        }
+      }
+
+      &-messages::-webkit-scrollbar{
+        width: 5px;
+      }
+      &-messages::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px #3674ff;
+        border-radius: 10px;
+      }
+      &-messages::-webkit-scrollbar-thumb {
+        background: #fafafa;
+        height: 30px;
+        border-radius: 10px;
       }
       &-messages {
-        padding: 0 10px;
+        padding: 10px 10px;
+        overflow-y: scroll;
+        height: calc(100% - 68px - 100px);
       }
     }
   }
